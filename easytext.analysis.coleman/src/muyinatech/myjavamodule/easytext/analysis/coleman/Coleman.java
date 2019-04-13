@@ -1,9 +1,11 @@
 package muyinatech.myjavamodule.easytext.analysis.coleman;
 
 import muyinatech.myjavamodule.easytext.analysis.api.Analyzer;
+import muyinatech.myjavamodule.easytext.analysis.api.Fast;
 
 import java.util.List;
 
+@Fast
 public class Coleman implements Analyzer {
 
     public static final String NAME = "Coleman-Liau";

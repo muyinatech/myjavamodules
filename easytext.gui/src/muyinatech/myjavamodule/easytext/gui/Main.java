@@ -40,8 +40,10 @@ public class Main extends Application {
         Text title = new Text("Choose an algorithm:");
         algorithm = new ComboBox<>();
 
+        // Initialise a ServiceLoader for services of type Analyzer.
         Iterable<Analyzer> analyzerServices = ServiceLoader.load(Analyzer.class);
 
+        // Iterate over instances
         for(Analyzer analyzer: analyzerServices) {
             analyzers.put(analyzer.getName(), analyzer);
             algorithm.getItems().add(analyzer.getName());
